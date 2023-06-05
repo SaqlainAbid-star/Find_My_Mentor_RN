@@ -58,53 +58,8 @@ const Section = ({ containerStyle, title, onPress, children }) => {
 const CoursesScreen = ({navigation}) => {
   const [courses, setCourses] = useState([]);
   const [search, setSearch] = useState();
-
-  useEffect(() => {
-    // Attach a listener for changes to the courses node
-    const coursesRef = database().ref('courses');
-    coursesRef.on('value', snapshot => {
-      const coursesObject = snapshot.val();
-      if (coursesObject) {
-        // Convert the courses object into an array of course objects
-        const coursesArray = Object.keys(coursesObject).map(courseId => {
-          const course = coursesObject[courseId];
-          return {
-            id: courseId,
-            mentor: course.mentor,
-            title: course.title,
-            duration: course.duration,
-            price: course.price,
-            ratings: course.ratings,
-            is_favourite: course.is_favourite,
-            videos: course.videos
-          };
-        });
-        setCourses(coursesArray);
-        // console.log(coursesArray[1].videos);
-        // console.log(coursesArray);
-      } else {
-        setCourses([]);
-      }
-
-    });
-
-    // Detach the listener when the component unmounts
-    return () => coursesRef.off('value');
-  }, []);
-
-  // return (
-  //   <ScrollView contentContainerStyle={styles.container}>
-  //     {courses.map((course, index) => (
-  //       <View key={index} style={styles.courseContainer}>
-  //         <Text style={styles.courseName}>Instructor: {course.mentor}</Text>
-  //         <Text style={styles.courseName}>Title: {course.title}</Text>
-  //         <Text style={styles.courseDescription}>Duration: {course.duration}</Text>
-  //         <Text style={styles.coursePrice}>Price: {`$${course.price}`}</Text>
-  //       </View>
-  //     ))}
-  //   </ScrollView>
-  // );
-
+  
+  
   function renderSearchBar() {
     return (
       <View>
