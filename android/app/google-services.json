@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "240944104420",
+    "firebase_url": "https://stop-watch-1b086.firebaseio.com",
+    "project_id": "stop-watch-1b086",
+    "storage_bucket": "stop-watch-1b086.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:240944104420:android:70b091afa2e29aaf553df1",
+        "android_client_info": {
+          "package_name": "com.mentorapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "240944104420-4ijn48j3iebrg362bl4c4el1o2dts2k9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMmCOtJ0EUex9QtgrJ6a7jR1f2-_SaOz4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "240944104420-4ijn48j3iebrg362bl4c4el1o2dts2k9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
